@@ -23,7 +23,6 @@ async function main() {
   // await createUser();
 
   const users = await prisma.user.findMany({
-    //@ts-ignore
     relationLoadStrategy: "join", // or 'query',
     include: {
       posts: true,
